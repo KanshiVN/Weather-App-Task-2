@@ -3,35 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Weather app</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="weather-input">
-            <div class="input-group">
-                <input type="text" id="userLocation" placeholder="Enter City Name">
-                
-                <select class="converter" id = "converter">
-                    <option value="C">°C</option>
-                    <option value="F">°F</option>
-                </select>
-               <i class="fa fa-search"></i>
+        <div class="card">
+
+            <div class="search">
+                <input type="text" placeholder="Enter city name" spellcheck="false">
+
+                <button><img src="../weather-app-img/images/search.png" alt="Search">
+                </button>
             </div>
-            <div class="weatherIcon"></div>
-            <h2 class="temprature"></h2>
-            <div class="feelslike"></div>
-            <div class="description"></div>
-            <hr/>
-            <div class="date"></div>
-            <div class="city"></div>
+            <div class="error"><p>Invalid city name</p></div>
+
+            <div class="weather">
+                <img src="../weather-app-img/images/rain.png" alt="rain" class="weather-icon">
+                <h1 class="temp">22°C</h1>
+                <h2 class="city">New York</h2>
+                <div class="details">
+                    <div class="col">
+                        <img src="../weather-app-img/images/humidity.png" alt="">
+                        <p class="humidity">50%</p>
+                        <p style="margin-left: 15px;">Humidity</p>
+                    </div>
+
+                    <div class="col">
+                        <img src="../weather-app-img/images/wind.png" alt="">
+                        <p class="wind">20 km/h</p>
+                        <p style="margin-left: 15px;">Wind Speed</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="weather-output">
-            <h2 class="heading">Today's Highlights</h2>
-            <h2 class="heading">This Week</h2>
-        </div>
-    </div>
+
+
+<script src="javas.js"></script>
 </body>
 </html>
